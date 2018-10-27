@@ -1,0 +1,25 @@
+<div class="container">
+  <h1> List </h1>
+  <!---List of items --->
+  <div class ="row">
+    <div ng-repeat="item in userCtrl.vm.list" style="padding:10px;">
+      <button class="btn btn-danger" ng-click="userCtrl.vm.remItem(item)" style="margin-right:10px;">X</button>  {{item}}
+    </div>
+  </div>
+
+  <!---Form for adding new item --->
+  <div class = "row">
+    <form role="form">
+      <div class="form-group">
+        <br>
+        <label for="newName">Add an item</label>
+        <br>
+        <input type="text" class="form-control" placeholder="Enter new item name" ng-model="userCtrl.vm.newName">
+        <br>
+        <button class = "btn btn-primary" ng-click="userCtrl.vm.addItem()" ng-disabled="!userCtrl.vm.newName">Add Item</button>
+      </div>
+    </form>
+  </div>
+
+
+</div>
